@@ -7,7 +7,7 @@ class Swig < Formula
 
   def install
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+                          "--without-pcre", "--prefix=#{prefix}"
     system "make"
     system "make install"
   end
